@@ -1,1 +1,1 @@
-# WTX6LW_XMLgyak
+# XML adatkezelés tárgyhoz szükséges heti feladatok.
