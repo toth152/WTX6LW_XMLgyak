@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+<style>
+
+fieldset {
+border-radius: 10px;
+   background: #92a8d1;
+   width: 50%;
+}
+
+input[type=text]{
+	width: 200px;
+}
+
+input[type=number]{
+	width: 50px;
+}
+
+label {
+font-size: 20px;
+}
+
+</style>
+<body>
+<form action="feldolgozo.php" method="post">
+<fieldset>
+
+<label>Név:</label>
+<input type="text" name="nev" placeholder="Írd be a neved...">
+</br><p></p>
+<label>PIN kód:</label>
+<input type="text"  name="kod" placeholder="Írd be a PIN kódod...">
+</br><p></p>
+<label>Kedvenc gyümölcs:</label>
+<select name="gyumolcs">
+<option value="Dinnye">Dinnye</option>
+<option value="Eper">Eper</option>
+<option value="Meggy">Meggy</option>
+<option value="Szõlõ">Szõlõ</option>
+</select>
+</br><p></p>
+<label>Életkor:</label>
+<input type="number" name="eletkor">
+</br><p></p>
+<label>Lábméret:</label>
+<input type="number" name="labmeret">
+</br><p></p>
+<label>Önbizalom:</label>
+0
+<input type="range" value="50" name="onbizalom">
+100
+</br><p></p>
+<input type="submit">
+
+</fieldset>
+</form>
+
+</body>
+</html>
