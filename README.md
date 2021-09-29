@@ -1,1 +1,1 @@
-# XML adatkezelés tárgyhoz szükséges heti feladatok.
+# XML adatkezelés tárgyhoz szükséges feladatok heti felosztásban.
