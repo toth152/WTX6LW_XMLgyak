@@ -8,17 +8,21 @@
 		<ev>2010</ev>
 		<kiado>Kiado_1</kiado>
 		<szerzo>Szerzo1</szerzo>
+		<kivonat>Java programozás alapjai</kivonat>
 	</konyv>
 	<konyv id="k_2">
 		<cim>C++ Programozas</cim>
 		<ev>2011</ev>
 		<kiado>Kiado_2</kiado>
-		<szerzo>Szerzo1, Szerzo2</szerzo>
+		<szerzo>Szerzo1</szerzo>
+		<szerzo>Szerzo2</szerzo>
+		<kivonat>C++ programozás alapjai</kivonat>
 	</konyv>
 	<konyv id="k_3">
 		<cim>Python Programozas</cim>
 		<ev>2012</ev>
 		<kiado>Kiado_3</kiado>
-		<szerzo>Szerzo3</szerzo>
+		<szerzo>Szerzo1</szerzo>
+		<kivonat>Python programozás alapjai</kivonat>
 	</konyv>
 </konyvek>

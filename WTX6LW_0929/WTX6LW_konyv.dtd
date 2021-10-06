@@ -4,9 +4,10 @@
 
 <!ATTLIST konyv id CDATA #REQUIRED>  
 
-<!ELEMENT konyv (cim,ev,kiado,szerzo+)>
+<!ELEMENT konyv (cim,ev,kiado,szerzo+,kivonat?)>
 
 <!ELEMENT cim (#PCDATA)>
 <!ELEMENT ev (#PCDATA)>
 <!ELEMENT kiado (#PCDATA)>
 <!ELEMENT szerzo (#PCDATA)>
+<!ELEMENT kivonat (#PCDATA)>
