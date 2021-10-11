@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<convert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="WTX6LW_ertoxsd.xsd">
+    
+    <A Aa="A_1">
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ac>
+            <Acd></Acd>
+            <Ace></Ace>
+        </Ac>
+    </A>
+
+    <B Ba="B_1" B_C="B_2">
+        <Bb>
+            <Bbx></Bbx>
+            <Bby></Bby>
+        </Bb>
+    </B>
+
+    <C Ca="C_1">
+        <Cb></Cb>
+    </C>
+
+    <A_B A_B_A="AB_1" A_B_B="AB_2">
+        <A_B_c></A_B_c>
+    </A_B>
+</convert>
