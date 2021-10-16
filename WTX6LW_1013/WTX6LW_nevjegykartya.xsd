@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+		<xs:element name="nevjegykartyak">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="nevjegykartya" type="nevjegykartyatype"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+   
+    <xs:attribute name="id" type="xs:string" />
+
+    <xs:complexType name="nevjegykartyatype">
+        <xs:complexContent>
+            <xs:extension base="nevjegykartyatypebase">
+                <xs:attribute ref="id"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="nevjegykartyatypebase">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="ceg" type="cegtype"/>
+            <xs:element name="beosztas" type="xs:string"/>
+            <xs:element name="telefonszam" type="telefonszamtype"/>
+            <xs:element name="email" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="cegtype">
+        <xs:sequence>
+        	<xs:element name="nev" type="xs:string"/>
+            <xs:element name="cim" type="cimtype"/>
+            <xs:element name="telefonszam" type="telefonszamtype"/>
+            <xs:element name="weblap" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cimtype">
+        <xs:sequence>
+            <xs:element name="iranyitoszam" type="xs:int"/>
+            <xs:element name="varos" type="xs:string"/>
+            <xs:element name="utca" type="xs:string"/>
+            <xs:element name="hazszam" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="telefonszamtype">
+        <xs:simpleContent>
+            <xs:extension base="telefonszamString">
+                <xs:attribute name="korzet" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="telefonszamString">
+        <xs:restriction base="xs:string">
+
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

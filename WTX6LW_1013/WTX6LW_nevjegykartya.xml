@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nevjegykartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="WTX6LW_nevjegykartya.xsd">
+
+<!-- <nevjegykartyak>-->
+    <nevjegykartya id="K1">
+        <nev>Toth Tibor David</nev>
+        <ceg>
+            <nev>Toth Zrt.</nev>
+            <cim>
+                <iranyitoszam>3588</iranyitoszam>
+                <varos>Hejokurt</varos>
+                <utca>Deak</utca>
+                <hazszam>15</hazszam>
+            </cim>
+            <telefonszam korzet="49">555555</telefonszam>
+            <weblap>tothzrt.com</weblap>
+        </ceg>
+        <beosztas>Tanulo</beosztas>
+        <telefonszam korzet="30">3334445</telefonszam>
+        <email>toth@tothzrt.com</email>
+    </nevjegykartya>
+    <nevjegykartya id="K2">
+       <nev>Teszt Eszter</nev>
+        <ceg>
+            <nev>Eszti Zrt.</nev>
+            <cim>
+                <iranyitoszam>1080</iranyitoszam>
+                <varos>ZalaEegerszeg</varos>
+                <utca>Hajnal</utca>
+                <hazszam>1</hazszam>
+            </cim>
+            <telefonszam korzet="52">5550120</telefonszam>
+            <weblap>esztizrt.com</weblap>
+        </ceg>
+        <beosztas>Titkarno</beosztas>
+        <telefonszam korzet="30">1111212</telefonszam>
+        <email>titkar@esztizrt.com</email>
+    </nevjegykartya>
+    <nevjegykartya id="K3">
+        <nev>Senki Semmi</nev>
+        <ceg>
+            <nev>Valaki Zrt.</nev>
+            <cim>
+                <iranyitoszam>1111</iranyitoszam>
+                <varos>Keszthely</varos>
+                <utca>Sehonnani</utca>
+                <hazszam>55</hazszam>
+            </cim>
+            <telefonszam korzet="55">5555050</telefonszam>
+            <weblap>valakizrt.com</weblap>
+        </ceg>
+        <beosztas>Senki</beosztas>
+        <telefonszam korzet="30">7778888</telefonszam>
+        <email>senki@semmizrt.com</email>
+    </nevjegykartya>
+</nevjegykartyak>
