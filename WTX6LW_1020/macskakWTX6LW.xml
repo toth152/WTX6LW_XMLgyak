@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE macskak SYSTEM "macskakWTX6LW.dtd">-->
+
+<macskak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="macskakWTX6LW.xsd">
+
+<!--  <macskak>-->
+	<macska id="m1">
+		<nev>Cirmi</nev>
+		<kor>2</kor>
+		<fajta>Cirmos</fajta>
+	</macska>
+	<macska id="m2">
+		<nev>Kormos</nev>
+		<kor>5</kor>
+		<fajta>Keverek</fajta>
+	</macska>
+	<macska id="m3">
+		<nev>Vakarcs</nev>
+		<kor>1</kor>
+		<fajta>Sziami</fajta>
+	</macska>
+</macskak>
