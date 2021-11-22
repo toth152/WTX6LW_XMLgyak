@@ -1,0 +1,19 @@
+<html>
+<body>
+<h2>Adatok</h2>
+<table border="1">
+<tr bgcolor="#59ed34">
+<th>ID</th><th>Vezeteknev</th><th>Keresztnev</th><th>Becenev</th><th>Kor</th>
+</tr>
+<tr>
+<td></td><td>Toth</td><td>Tibor David</td><td>Tibi</td><td>25</td>
+</tr>
+<tr>
+<td></td><td>Nagy</td><td>Anita</td><td>Ani</td><td>19</td>
+</tr>
+<tr>
+<td></td><td>Kis</td><td>Kamilla</td><td>Kami</td><td>38</td>
+</tr>
+</table>
+</body>
+</html>
