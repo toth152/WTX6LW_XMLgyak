@@ -1,0 +1,41 @@
+<html>
+<body>
+<h2>Toth Tibor David apple- template</h2> 
+      ID: <span style="font-size = 25px;">01</span>
+<br> 
+      Vezeteknev: <span style="color:ForestGreen;">Toth</span>
+<br> 
+      Keresztnev: <span style="color:FireBrick;">Tibor David</span>
+<br>
+<span style="color:black;">Tibi</span> 
+      Kor: <span style="color:MediumBlue;">25</span>
+<br> 
+      Fizetes: <span style="color:Crimson;">600000</span>
+<br>
+<br> 
+      ID: <span style="font-size = 25px;">02</span>
+<br> 
+      Vezeteknev: <span style="color:ForestGreen;">Nagy</span>
+<br> 
+      Keresztnev: <span style="color:FireBrick;">Anita</span>
+<br>
+<span style="color:black;">Ani</span> 
+      Kor: <span style="color:MediumBlue;">19</span>
+<br> 
+      Fizetes: <span style="color:Crimson;">600000</span>
+<br>
+<br> 
+      ID: <span style="font-size = 25px;">03</span>
+<br> 
+      Vezeteknev: <span style="color:ForestGreen;">Kis</span>
+<br> 
+      Keresztnev: <span style="color:FireBrick;">Kamilla</span>
+<br>
+<span style="color:black;">Kami</span> 
+      Kor: <span style="color:MediumBlue;">38</span>
+<br> 
+      Fizetes: <span style="color:Crimson;">600000</span>
+<br>
+<br>
+</body>
+</html>

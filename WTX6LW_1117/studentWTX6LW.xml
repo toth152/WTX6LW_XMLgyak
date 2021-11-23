@@ -9,6 +9,7 @@
 		<keresztnev>Tibor David</keresztnev>
 		<becenev>Tibi</becenev>
 		<kor>25</kor>
+		<fizetes>600000</fizetes>
 	</student>
 	
 	<student id="02">
@@ -16,6 +17,7 @@
 		<keresztnev>Anita</keresztnev>
 		<becenev>Ani</becenev>
 		<kor>19</kor>
+		<fizetes>600000</fizetes>
 	</student>
 	
 	<student id="03">
@@ -23,6 +25,7 @@
 		<keresztnev>Kamilla</keresztnev>
 		<becenev>Kami</becenev>
 		<kor>38</kor>
+		<fizetes>600000</fizetes>
 	</student>
 	
 </class>
