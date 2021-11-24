@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type = "text/xsl" href = "studentWTX6LW_choose.xsl"?>
+
+<class>
+
+	<student id="01">
+		<vezeteknev>Toth</vezeteknev>
+		<keresztnev>Tibor David</keresztnev>
+		<becenev>Tibi</becenev>
+		<kor>25</kor>
+		<fizetes>600000</fizetes>
+		<fokozat></fokozat>
+	</student>
+	
+	<student id="02">
+		<vezeteknev>Nagy</vezeteknev>
+		<keresztnev>Anita</keresztnev>
+		<becenev>Ani</becenev>
+		<kor>19</kor>
+		<fizetes>600000</fizetes>
+		<fokozat></fokozat>
+	</student>
+	
+	<student id="03">
+		<vezeteknev>Kis</vezeteknev>
+		<keresztnev>Kamilla</keresztnev>
+		<becenev>Kami</becenev>
+		<kor>38</kor>
+		<fizetes>600000</fizetes>
+		<fokozat></fokozat>
+	</student>
+	
+</class>
