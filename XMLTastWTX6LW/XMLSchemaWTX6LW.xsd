@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+		<xs:element name="konyvtar" type="konyvtarTipus">
+		<xs:key name="K1">
+				<xs:selector xpath="kolcsonzo" />
+				<xs:field xpath="@id" />
+			</xs:key>
+			<xs:key name="K2">
+				<xs:selector xpath="konyv" />
+				<xs:field xpath="@id" />
+			</xs:key>
+			<xs:key name="K3">
+				<xs:selector xpath="konyvtaros" />
+				<xs:field xpath="@id" />
+			</xs:key>
+			<xs:key name="K4">
+				<xs:selector xpath="termek" />
+				<xs:field xpath="@id" />
+			</xs:key>
+			<xs:key name="K5">
+				<xs:selector xpath="gyarto" />
+				<xs:field xpath="@id" />
+			</xs:key>
+			
+			<xs:keyref refer="K1" name="refK1">
+				<xs:selector xpath="kolcsonzes" />
+				<xs:field xpath="@K1ID" />
+			</xs:keyref>
+			<xs:keyref refer="K2" name="refK2_1">
+				<xs:selector xpath="kolcsonzes" />
+				<xs:field xpath="@K2ID" />
+			</xs:keyref>
+			<xs:keyref refer="K2" name="refK2_2">
+				<xs:selector xpath="kezeles" />
+				<xs:field xpath="@K2ID" />
+			</xs:keyref>
+			<xs:keyref refer="K3" name="refK3_1">
+				<xs:selector xpath="kezeles" />
+				<xs:field xpath="@K3ID" />
+			</xs:keyref>
+			<xs:keyref refer="K3" name="refK3_2">
+				<xs:selector xpath="beszerzes" />
+				<xs:field xpath="@K3ID" />
+			</xs:keyref>
+			<xs:keyref refer="K4" name="refK4_1">
+				<xs:selector xpath="beszerzes" />
+				<xs:field xpath="@TID" />
+			</xs:keyref>
+			<xs:keyref refer="K4" name="refK4_2">
+				<xs:selector xpath="gyartas" />
+				<xs:field xpath="@TID" />
+			</xs:keyref>
+			<xs:keyref refer="K5" name="refK5_1">
+				<xs:selector xpath="gyartas" />
+				<xs:field xpath="@GyID" />
+			</xs:keyref>
+		</xs:element>
+			
+			<xs:complexType name="konyvtarTipus">
+				<xs:sequence>
+					<xs:element name="kolcsonzo" type="kolcsonzoTipus" minOccurs="0" maxOccurs="100"/> <!-- előfordulás -->
+					<xs:element name="kolcsonzes" type="kolcsonzesTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="konyv" type="konyvTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="kezeles" type="kezelesTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="konyvtaros" type="konyvtarosTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="beszerzes" type="beszerzesTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="termek" type="termekTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="gyartas" type="gyartasTipus" minOccurs="0" maxOccurs="100"/>
+					<xs:element name="gyarto" type="gyartoTipus" minOccurs="0" maxOccurs="100"/>
+				</xs:sequence>
+			</xs:complexType>
+		
+			
+			<xs:complexType name="kolcsonzoTipus">
+				<xs:sequence>
+					<xs:element name="nev" type="xs:string"/>
+					<xs:element name="lakhely" type="lakhelyTipus"/>
+					<xs:element name="elerhetoseg" type="elerhetosegTipus"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:string" use="required"/> <!-- formátuma miatt string -->
+			</xs:complexType>
+			
+			<xs:complexType name="lakhelyTipus">
+				<xs:sequence>
+					<xs:element name="varos" type="xs:string"/>
+					<xs:element name="utca" type="xs:string"/>
+					<xs:element name="hazszam" type="xs:unsignedShort"/>
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="elerhetosegTipus">
+				<xs:sequence>
+					<xs:element name="tel" type="xs:unsignedLong"/>
+					<xs:element name="email" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="kolcsonzesTipus">
+				<xs:sequence>
+					<xs:element name="datum" type="xs:date"/>
+					<xs:element name="helyszin" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="K1ID" type="xs:string" use="required"/> 
+				<xs:attribute name="K2ID" type="xs:string" use="required"/>
+			</xs:complexType>
+			
+			<xs:complexType name="konyvTipus">
+				<xs:sequence>
+					<xs:element name="cim" type="xs:string"/>
+					<xs:element name="ar" type="xs:unsignedShort"/>
+					<xs:element name="szerzo" type="xs:string"/>
+					<xs:element name="oldalszam" type="xs:unsignedShort"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:string" use="required"/> <!-- formátuma miatt string -->
+			</xs:complexType>
+			
+			<xs:complexType name="kezelesTipus">
+				<xs:attribute name="K2ID" type="xs:string" use="required"/> 
+				<xs:attribute name="K3ID" type="xs:string" use="required"/>
+			</xs:complexType>
+			
+			<xs:complexType name="konyvtarosTipus">
+				<xs:sequence>
+					<xs:element name="nev" type="xs:string"/>
+					<xs:element name="elerhetoseg" type="elerhetosegTipus"/>
+					<xs:element name="kituntetes" type="kituntetesTipus"/>		
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:string" use="required"/> <!-- formátuma miatt string -->
+			</xs:complexType>
+			
+			<xs:complexType name="kituntetesTipus">
+				<xs:sequence>
+					<xs:element name="elso" type="xs:string"/>
+					<xs:element name="masodik" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="beszerzesTipus">
+				<xs:attribute name="K3ID" type="xs:string" use="required"/> 
+				<xs:attribute name="TID" type="xs:string" use="required"/>
+			</xs:complexType>
+			
+			<xs:complexType name="termekTipus">
+				<xs:sequence>
+					<xs:element name="nev" type="xs:string"/>
+					<xs:element name="ar" type="xs:unsignedShort"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:string" use="required"/> <!-- formátuma miatt string -->
+			</xs:complexType>
+			
+			<xs:complexType name="gyartasTipus">
+				<xs:attribute name="TID" type="xs:string" use="required"/> 
+				<xs:attribute name="GyID" type="xs:string" use="required"/>
+			</xs:complexType>
+			
+			<xs:complexType name="gyartoTipus">
+				<xs:sequence>
+					<xs:element name="nev" type="xs:string"/>
+					<xs:element name="elerhetoseg" type="elerhetosegTipus"/>		
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:string" use="required"/> <!-- formátuma miatt string -->
+			</xs:complexType>
+			
+			
+			
+			
+			
+</xs:schema>
+		
+		

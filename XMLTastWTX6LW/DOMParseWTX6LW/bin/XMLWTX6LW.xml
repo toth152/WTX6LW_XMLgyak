@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konyvtar xmlns:xsi="https://w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaWTX6LW.xsd">
+	
+	<Kolcsonzo ID="K100">
+		<Nev>Molnár Kata</Nev>
+		<Lakhely>
+			<Varos>Miskolc</Varos>
+			<Utca>Kossuth</Utca>
+			<Hazszam>1</Hazszam>
+		</Lakhely>
+		<Elerhetoseg>
+			<Tel>06302342211</Tel>
+			<Email>molnar@gmail.com</Email>
+		</Elerhetoseg>
+	</Kolcsonzo>
+	
+	<Kolcsonzo ID="K101">
+		<Nev>Tóth Andor</Nev>
+		<Lakhely>
+			<Varos>Budapest</Varos>
+			<Utca>Nincs</Utca>
+			<Hazszam>30</Hazszam>
+		</Lakhely>
+		<Elerhetoseg>
+			<Tel>06301234567</Tel>
+			<Email>toth@gmail.com</Email>
+		</Elerhetoseg>
+	</Kolcsonzo>
+	
+	<Kolcsonzo ID="K102">
+		<Nev>Haragos Hugó</Nev>
+		<Lakhely>
+			<Varos>Eger</Varos>
+			<Utca>Egres</Utca>
+			<Hazszam>11</Hazszam>
+		</Lakhely>
+		<Elerhetoseg>
+			<Tel>06309876541</Tel>
+			<Email>haragos@gmail.com</Email>
+		</Elerhetoseg>
+	</Kolcsonzo>
+	
+	<Kolcsonzes K1ID="K100" K2ID="K200">
+		<Datum>2012-07-19</Datum>
+		<Helyszin>Miskolc</Helyszin>
+	</Kolcsonzes>
+	<Kolcsonzes K1ID="K101" K2ID="K201">
+		<Datum>2015-05-15</Datum>
+		<Helyszin>Budapest</Helyszin>
+	</Kolcsonzes>
+	<Kolcsonzes K1ID="K102" K2ID="K202">
+		<Datum>2010-10-10</Datum>
+		<Helyszin>Eger</Helyszin>
+	</Kolcsonzes>
+		
+	<Konyv ID="K200">
+		<Cim>A kis hajó</Cim>
+		<Ar>3500</Ar>
+		<Szerzo>Kiss Imre</Szerzo>
+		<Oldalszam>550</Oldalszam>
+	</Konyv>
+	
+	<Konyv ID="K201">
+		<Cim>A nagy felleg</Cim>
+		<Ar>5200</Ar>
+		<Szerzo>Nagy Anita</Szerzo>
+		<Oldalszam>800</Oldalszam>
+	</Konyv>
+	
+	<Konyv ID="K202">
+		<Cim>A rút kiskacsa</Cim>
+		<Ar>2750</Ar>
+		<Szerzo>Gellér László</Szerzo>
+		<Oldalszam>240</Oldalszam>
+	</Konyv>
+	
+	<Kezeles K2ID="K200" K3ID="K300"/>
+	<Kezeles K2ID="K201" K3ID="K301"/>
+	<Kezeles K2ID="K202" K3ID="K302"/>
+	
+	<Konyvtaros ID="K300">
+		<Nev>Könyvtáros1</Nev>
+		<Elerhetoseg>
+			<Tel>06301111111</Tel>
+			<Email>konyvtaros1@gmail.com</Email>
+		</Elerhetoseg>
+		<Kituntetes>
+			<Elso>Legtöbb kölcsönzés</Elso>
+			<Masodik>Év könyvtárosa 2020</Masodik>
+		</Kituntetes>
+	</Konyvtaros>
+	
+	<Konyvtaros ID="K301">
+		<Nev>Könyvtáros2</Nev>
+		<Elerhetoseg>
+			<Tel>06301111112</Tel>
+			<Email>konyvtaros2@gmail.com</Email>
+		</Elerhetoseg>
+		<Kituntetes>
+			<Elso>Legkedvesebb könyvtáros</Elso>
+			<Masodik>Legnagyobb tudás</Masodik>
+		</Kituntetes>
+	</Konyvtaros>
+	
+	<Konyvtaros ID="K302">
+		<Nev>Könyvtáros3</Nev>
+		<Elerhetoseg>
+			<Tel>06301111113</Tel>
+			<Email>konyvtaros3@gmail.com</Email>
+		</Elerhetoseg>
+		<Kituntetes>
+			<Elso>Legtöbb munkaóra</Elso>
+			<Masodik>Legtisztább munkakörnyezet</Masodik>
+		</Kituntetes>
+	</Konyvtaros>
+	
+	<Beszerzes K3ID="F300" TID="T400"/>
+	<Beszerzes K3ID="F301" TID="T401"/>
+	<Beszerzes K3ID="F302" TID="T402"/>
+	
+	<Termek ID="T400">
+		<Nev>Igénylőlap</Nev>
+		<Ar>5555</Ar>
+	</Termek>
+	
+	<Termek ID="T401">
+		<Nev>Könyvespolc</Nev>
+		<Ar>15000</Ar>
+	</Termek>
+	
+	<Termek ID="T402">
+		<Nev>Írószerek</Nev>
+		<Ar>3750</Ar>
+	</Termek>
+	
+	<Gyartas TID="T400" GyID="Gy500"/>
+	<Gyartas TID="T401" GyID="Gy500"/>
+	<Gyartas TID="T402" GyID="Gy501"/>
+	
+	<Gyarto ID="Gy500">
+		<Nev>Papírbolt Kft.</Nev>
+		<Elerhetoseg>
+			<Tel>06469347529</Tel>
+			<Email>papirbolt.kft@gmail.com</Email>
+		</Elerhetoseg>
+	</Gyarto>
+	<Gyarto ID="Gy501">
+		<Nev>Könyvespolc Kft.</Nev>
+		<Elerhetoseg>
+			<Tel>06469347530</Tel>
+			<Email>konyvespolc.kft@gmail.com</Email>
+		</Elerhetoseg>
+	</Gyarto>
+	<Gyarto ID="Gy502">
+		<Nev>Írkálunk és védünk Kft.</Nev>
+		<Elerhetoseg>
+			<Tel>06469347531</Tel>
+			<Email>irkalunk@gmail.com</Email>
+		</Elerhetoseg>
+	</Gyarto>
+	
+</konyvtar>
