@@ -5,11 +5,8 @@ import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
+import javax.xml.parsers.ParserConfigurationException;      //sz¸ksÈges csomagok import·l·sa
+import javax.xml.transform.TransformerException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -19,103 +16,82 @@ import org.xml.sax.SAXException;
 
 public class DOMQueryWTX6LW {
 	
-	public static void main(String[] args) {
-		//Az esetleges keletkez√µ hb√°k lekezel√©se try-catch blokkban
-				try {
-		// A kezelend√µ f√°jl meghat√°roz√°sa
-					  File xmlFile = new File("src/XMLWTX6LW.xml");
+	public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
 
-		//Az XML f√°jl √°talak√≠t√°sa DOM objektumokk√°
-				        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-				        DocumentBuilder builder = factory.newDocumentBuilder();
-				        Document doc = builder.parse(xmlFile);
-				        doc.getDocumentElement().normalize();
-		//XPath seg√≠ts√©g√©vel hat√°rozzuk meg a m√≥dos√≠tand√≥ elemet, vagy annak gyermek elem√©t √©s az √∫j √©rt√©ket
-				        XPath xPath = XPathFactory.newInstance().newXPath();
-		//Megadjuk a kifejez√©st amit m√≥dos√≠tani szeretn√©nk
-				        String expression1 = "/konyvtar/Kolcsonzo[@ID ='K100']";
-				        NodeList nodeList1 = (NodeList) xPath.compile(expression1).evaluate(doc, XPathConstants.NODESET);
-				        
-				        String expression2 = "/konyvtar/Konyv[Ar > 3000]";
-				        NodeList nodeList2 = (NodeList) xPath.compile(expression2).evaluate(doc, XPathConstants.NODESET);
-				        
-				        String expression3 = "/konyvtar/Konyv[Ar > 3000 and Oldalszam > 700]";
-				        NodeList nodeList3 = (NodeList) xPath.compile(expression3).evaluate(doc, XPathConstants.NODESET); 
+		File xmlFile = new File("src/XMLWTX6LW.xml");     //felhaszn·lt XML f·jl
 		
-		//A ciklussal v√©gig j√°rjuk az adott elem gyermekelemeit √©s ki√≠ratjuk az √©rt√©keit		        
-				        for (int i = 0; i < nodeList1.getLength(); i++) {
-				            Node nNode = nodeList1.item(i);
-
-				            System.out.println("\nAktu√°lis elem: " + nNode.getNodeName());
-
-				            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				                Element eElement = (Element) nNode;
-
-				                System.out.println("K√∂lcs√∂nz≈ë ID-ja: " + eElement.getAttribute("ID"));
-
-				                System.out.println("N√©v: " + eElement.getElementsByTagName("Nev").item(0).getTextContent());
-
-				                System.out.println("C√≠m: "+"\n\tV√°ros: " + eElement.getElementsByTagName("Varos").item(0).getTextContent()+"\n\tUtca: "
-				                										+ eElement.getElementsByTagName("Utca").item(0).getTextContent()+"\n\tH√°zsz√°m: "
-				                										+ eElement.getElementsByTagName("Hazszam").item(0).getTextContent());
-
-				                System.out.println("El√©rhet√µs√©g: "+"\n\tTel: " + eElement.getElementsByTagName("Tel").item(0).getTextContent()+"\n\tEmail: "
-										+ eElement.getElementsByTagName("Email").item(0).getTextContent());
-				            }
-				        }
-				        
-				        for (int i = 0; i < nodeList2.getLength(); i++) {
-				            Node nNode = nodeList2.item(i);
-
-				            System.out.println("\nAktu√°lis elem: " + nNode.getNodeName());
-
-				            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				                Element eElement = (Element) nNode;
-
-				                System.out.println("K√∂nyv ID-ja: " + eElement.getAttribute("ID"));
-
-				                System.out.println("C√≠m: " + eElement.getElementsByTagName("Cim").item(0).getTextContent());
-				                
-				                System.out.println("√År: " + eElement.getElementsByTagName("Ar").item(0).getTextContent());
-				                
-				                System.out.println("Szerz≈ë: " + eElement.getElementsByTagName("Szerzo").item(0).getTextContent());
-				                
-				                System.out.println("Oldalsz√°m: " + eElement.getElementsByTagName("Oldalszam").item(0).getTextContent());
-
-				            }
-				        }
-				        
-				        
-				        for (int i = 0; i < nodeList3.getLength(); i++) {
-				            Node nNode = nodeList3.item(i);
-
-				            System.out.println("\nAktu√°lis elem: " + nNode.getNodeName());
-
-				            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				                Element eElement = (Element) nNode;
-
-				                System.out.println("K√∂nyv ID-ja: " + eElement.getAttribute("ID"));
-
-				                System.out.println("C√≠m: " + eElement.getElementsByTagName("Cim").item(0).getTextContent());
-				                
-				                System.out.println("√År: " + eElement.getElementsByTagName("Ar").item(0).getTextContent());
-				                
-				                System.out.println("Szerz≈ë: " + eElement.getElementsByTagName("Szerzo").item(0).getTextContent());
-				                
-				                System.out.println("Oldalsz√°m: " + eElement.getElementsByTagName("Oldalszam").item(0).getTextContent());
-
-				            }
-				        }
-				}catch(SAXException sxe) {
-					sxe.printStackTrace();
-				}catch(ParserConfigurationException pe) {
-					pe.printStackTrace();
-				}catch(IOException ioe) {
-					ioe.printStackTrace();
-				}catch(XPathExpressionException xe) {
-					xe.printStackTrace();
-				}
-
+		//DocumentumBuilder lÈtrehoz·sa
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = factory.newDocumentBuilder();
+		
+		//A parse() metÛdus elemzi az XML f·jlt
+		Document doc = dBuilder.parse(xmlFile);
+		
+		doc.getDocumentElement().normalize();
+		
+		//Megkapjuk a dokumentum gyˆkÈrelemÈt.
+		System.out.println("Root element: " + doc.getDocumentElement().getNodeName() + "\n");
+		
+		System.out.println("--------------");
+		System.out.println("1. lekÈrdezÈs:");
+		System.out.println("A kˆlcsˆzık adatai:\n");
+		
+		//VÈgigiter·l·s a list·n
+		NodeList kolcsonzoList = doc.getElementsByTagName("Kolcsonzo");
+		for(int i=0; i<kolcsonzoList.getLength(); i++) {
+			Node k = kolcsonzoList.item(i);
+			if(k.getNodeType()==Node.ELEMENT_NODE) {
+				Element kolcsonzo = (Element) k;
+				String ID = kolcsonzo.getAttribute("ID");
+				NodeList nevList = kolcsonzo.getChildNodes();
+				for(int j=0; j<nevList.getLength(); j++) {
+					Node n = nevList.item(j);
+					if (n.getNodeType()==Node.ELEMENT_NODE) {
+						Element nev = (Element) n;
+						System.out.println("Kˆlcsˆnzı " + ID + ": " + nev.getTagName() + "= " + nev.getTextContent());
+						
+					}
 			}
-
 		}
+	}
+		System.out.println("--------------");
+		System.out.println("2. lekÈrdezÈs:");
+		System.out.println("Azon kˆnyvek adatai, amelyeknek ·ra 5200:\n");
+		
+		NodeList arList = doc.getElementsByTagName("Konyv");
+		
+		for(int i = 0; i < arList.getLength(); i++) {
+				
+			Node a = arList.item(i);
+				
+			if(a.getNodeType() == Node.ELEMENT_NODE) {
+				Element elem = (Element) a;
+				
+				Node node5 = elem.getElementsByTagName("Ar").item(0);
+				String ar = node5.getTextContent();
+				
+				if("5200".equals(ar)) {
+					String ID = elem.getAttribute("ID");
+
+					Node node1 = elem.getElementsByTagName("Cim").item(0);
+					String cim = node1.getTextContent();
+					
+					Node node2 = elem.getElementsByTagName("Ar").item(0);
+					String ar2 = node2.getTextContent();
+					
+					Node node3 = elem.getElementsByTagName("Szerzo").item(0);
+					String szerzo = node3.getTextContent();
+					
+					Node node4 = elem.getElementsByTagName("Oldalszam").item(0);
+					String oldalszam = node4.getTextContent();
+					
+					System.out.println("Kˆnyv ID: " + ID);
+					System.out.println("CÌm: " + cim);
+					System.out.println("¡r: " + ar2);
+					System.out.println("Szerzı: " + szerzo);
+					System.out.println("Oldalsz·m: " + oldalszam + "\n");
+				}
+			}
+		}
+}
+}
