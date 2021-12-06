@@ -1,0 +1,17 @@
+<html>
+<body>
+<table border="1">
+<h1>Aut&oacute;t&iacute;pusok &eacute;s darabsz&aacute;maik p&eacute;ld&aacute;nysz&aacute;m szerinti cs&ouml;kkenőben</h1>
+<th>M&aacute;rka</th><th>Darab</th>
+<tr>
+<td>Fiat</td><td>1</td>
+</tr>
+<tr>
+<td>Skoda</td><td>1</td>
+</tr>
+<tr>
+<td>Opel</td><td>2</td>
+</tr>
+</table>
+</body>
+</html>
